@@ -3,10 +3,10 @@
 //ET le champs therightName, therightdesc et therightPerm du rôle lié à cette utilisateur : jointure interne amenant theright. 
 //Cette fonction renvoit un tableau associatif ou du NULL#
 
-fonction theuserSelectOneById(mysqli $db, int $id): ?array{
+function theuserSelectOneById(mysqli $db, int $id): ?array{
     $sql = "SELECT idtheuser, theuserName, theuserLogin
             FROM theuser
-            WHERE iduser = $id";
+            WHERE iduser = $id;";
     $request = mysqli_query($db, $sql) or die("Erreur sql : " . mysqli_error($db));
 }
 
